@@ -1,2 +1,7 @@
-<h1>Kittens#show</h1>
-<p>Find me in app/views/kittens/show.html.erb</p>
+<h1><%= @kitten.name %></h1>
+<ul>
+  <li>Age: <%= @kitten.age %></li>
+  <li>Cuteness: <%= @kitten.cuteness %> </li>
+  <li>Softness: <%= @kitten.softness %></li>
+</ul>
+<p><%= link_to 'Kitten list', root_url%></p>
