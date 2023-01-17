@@ -5,4 +5,5 @@
   <li>Softness: <%= @kitten.softness %> </li>
 </ul>
 <p><%= link_to 'Edit', edit_kitten_path(@kitten) %></p>
+<p><%= link_to 'Delete', kitten_path(@kitten), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
 <p><%= link_to 'Kitten list', root_url%></p>
