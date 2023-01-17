@@ -1,0 +1,12 @@
+<%= form_with model: kitten do |form| %>
+  <% @levels = %w[Plenty Amazing Jaw-dropping Low Medium High] %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :age %>
+  <%= form.number_field :age, min: 0 %>
+  <%= form.label :cuteness %>
+  <%= form.select :cuteness, @levels.map { |value| [value, value] } %>
+  <%= form.label :softness %>
+  <%= form.select :softness, @levels.map { |value| [value, value] } %>
+  <%= form.submit %>
+<% end %>
