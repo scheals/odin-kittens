@@ -37,6 +37,11 @@ class KittensController < ApplicationController
 
   def show
     @kitten = Kitten.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @kitten, only: %i[id name age softness cuteness] }
+    end
   end
 
   def index
